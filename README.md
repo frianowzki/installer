@@ -1,2 +1,2 @@
-# This is mostly for dependencies installer
+# Dependencies Installer
 
