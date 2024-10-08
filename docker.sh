@@ -1,5 +1,9 @@
 sudo apt update -y && sudo apt upgrade -y
 
+for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do
+  sudo apt-get remove -y $pkg
+done
+
 sudo apt-get update
 sudo apt-get install -y ca-certificates curl gnupg
 
