@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Function: Checking Go Installation
+check_go_installed() {
+  if command -v go &> /dev/null; then
+    echo -e "\n[2/6] Go installed. Skipping Go installation...\n"
+  else
+    install_go
+  fi
+}
+
 # Function: Go Installer
 install_go() {
   local GO_VERSION="1.23.0"
